@@ -1,0 +1,5 @@
+2024-03-23 02:51:30 INFO  BaseTest:17 - extent report is intialized
+2024-03-23 02:51:42 INFO  BaseTest:24 - chrome browser is launched successfully
+2024-03-23 02:51:42 INFO  BaseTest:26 - browser is maximized
+2024-03-23 02:52:14 INFO  BaseTest:28 - url https://amazon.in is launched
+2024-03-23 02:54:26 INFO  BaseTest:34 - cleaning up browser session
