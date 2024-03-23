@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [LW_Automation_Assignment_Suite]">
+  <test thread-count="1" name="Test(failed)">
+    <classes>
+      <class name="stepdefinitions.TestNGSuiteRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="2"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- stepdefinitions.TestNGSuiteRunner -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [LW_Automation_Assignment_Suite] -->

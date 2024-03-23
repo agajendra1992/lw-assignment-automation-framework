@@ -2,28 +2,31 @@ package com.ui.automationassignment.validations;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
-
-import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-
 import com.ui.automationassignment.pom.AddCartPageObjects;
 import com.ui.automationassignment.pom.ProductPageObjects;
 import com.ui.automationassignment.utils.Constant;
+
+
+/*
+ * ProductPageValidation : is used for keep validation methods related to then step in feature file
+ * 
+ */
+
 
 public class ProductPageValidation {
 	private static Logger logger = LogManager.getLogger(HomePageValidation.class);
 	private ProductPageObjects productPageObjects = new ProductPageObjects();
 	private AddCartPageObjects addCartPageObjects = new AddCartPageObjects();
 	
-	public void validateProductIsDisplayed() {
-		assertTrue(productPageObjects.productPageIsDisplayed(), "Product page is not displayed");
-	
+	public void validateProductIsDisplayed(String product ) {
+		assertTrue(productPageObjects.productPageIsDisplayed(product.replace("Price", "")), "Product page is not displayed");
+		logger.info("product page is displayed as");
 	}
 	
 	public void validateSubTotalPriceIsMatching(String productPrice) {
@@ -47,34 +50,17 @@ public class ProductPageValidation {
 
 	}	
 	
-//	public void validateCartPagePriceIsMatching(String productPrice) {
-//		String actualPrice  = addCartPageObjects.getCartPagePrice().trim();
-//		 DecimalFormat decimalFormat = new DecimalFormat("#,##,###");
-//		String atualformattedValue = decimalFormat.format(Double.parseDouble(actualPrice.replace(",","")));
-//		atualformattedValue= atualformattedValue.replace(",", "");
-//		String expectedPrice = Constant.getSavedValues(productPrice).replace(",", "");
-//		assertEquals(atualformattedValue, expectedPrice, "ProductPage Price and Cart Page Price is not matching");
-//	}
-	
 	public void validateCartPagePriceIsMatching(String productPrice) {
 		List<String> expectedPriceKeyList = Arrays.asList(productPrice.split(","));
-		List<String> actualCartPriceList =  new ArrayList<String>();
+		List<String> actualCartPriceList = new ArrayList<String>();
 		List<String> expectedPriceList = new ArrayList<String>();
 		for (int i = 0; i < expectedPriceKeyList.size(); i++) {
 			DecimalFormat decimalFormat = new DecimalFormat("#,##,###");
-			String atualformattedValue = decimalFormat.format(Double.parseDouble(addCartPageObjects.getCartPriceList().get(i).replace(",","")));
+			String atualformattedValue = decimalFormat
+					.format(Double.parseDouble(addCartPageObjects.getCartPriceList().get(i).replace(",", "")));
 			actualCartPriceList.add(atualformattedValue.replace(",", ""));
 			expectedPriceList.add(Constant.getSavedValues(expectedPriceKeyList.get(i)).replace(",", ""));
 		}
 		assertEquals(actualCartPriceList, expectedPriceList, "ProductPage Price and Cart Page Price is not matching");
-//		String actualPrice  = addCartPageObjects.getCartPagePrice().trim();
-//		 DecimalFormat decimalFormat = new DecimalFormat("#,##,###");
-//		String atualformattedValue = decimalFormat.format(Double.parseDouble(actualPrice.replace(",","")));
-//		atualformattedValue= atualformattedValue.replace(",", "");
-//		String expectedPrice = Constant.getSavedValues(productPrice).replace(",", "");
-//		assertEquals(atualformattedValue, expectedPrice, "ProductPage Price and Cart Page Price is not matching");
 	}
-
-
-
 }

@@ -31,7 +31,7 @@ public class AddCartStepDefinition implements En {
 		});
 
 		And("I landed on product page and saved the {string}", (String productPrice) -> {
-			//productPageValidation.validateProductIsDisplayed();
+			productPageValidation.validateProductIsDisplayed(productPrice);
 			productPageAction.saveProductPrice(productPrice);
 		});
 
@@ -61,9 +61,6 @@ public class AddCartStepDefinition implements En {
 			homePageValidation.HomePageIsDisplayed();
 		});
 		
-		And("I cleared the cart and navigate to home page", () -> {
-			addCartPageAction.clickOnDeleteProduct();
-		}); 
 
 	}
 }

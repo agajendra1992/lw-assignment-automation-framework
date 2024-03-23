@@ -19,11 +19,11 @@ public class BaseTest extends Utils {
 	@BeforeTest
 	public void NavigateToApplicatioUrl() {
 		String browser = properties.getProperty("browser");
-		InitializeDriver.getDriver(BrowserType.fromString(browser));
+		InitDriver.getDriver(BrowserType.fromString(browser));
 		logger.info(browser+ " browser is launched successfully");
-		InitializeDriver.driver.manage().window().maximize();
+		InitDriver.driver.manage().window().maximize();
 		logger.info("browser is maximized");
-		InitializeDriver.driver.get(properties.getProperty("url"));
+		InitDriver.driver.get(properties.getProperty("url"));
 		logger.info("url "+ properties.getProperty("url") +" is launched");
 	}
 	

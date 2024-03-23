@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-23T13:19:06 IST" name="LW_Automation_Assignment_Suite" finished-at="2024-03-23T13:26:08 IST" duration-ms="422359">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepdefinitions.TestNGSuiteRunner@4d1c005e]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2024-03-23T13:19:06 IST" name="Test" finished-at="2024-03-23T13:26:08 IST" duration-ms="422359">
+      <class name="com.ui.automationassignment.utils.BaseTest">
+        <test-method is-config="true" signature="initBrowser()[pri:0, instance:com.ui.automationassignment.utils.BaseTest@6e9a5ed8]" started-at="2024-03-23T13:19:03 IST" name="initBrowser" finished-at="2024-03-23T13:19:06 IST" duration-ms="3330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowser -->
+        <test-method is-config="true" signature="NavigateToApplicatioUrl()[pri:0, instance:com.ui.automationassignment.utils.BaseTest@6e9a5ed8]" started-at="2024-03-23T13:19:06 IST" name="NavigateToApplicatioUrl" finished-at="2024-03-23T13:20:19 IST" duration-ms="72861" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToApplicatioUrl -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ui.automationassignment.utils.BaseTest@6e9a5ed8]" started-at="2024-03-23T13:26:09 IST" name="teardown" finished-at="2024-03-23T13:26:38 IST" duration-ms="28216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.ui.automationassignment.utils.BaseTest -->
+      <class name="stepdefinitions.TestNGSuiteRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:stepdefinitions.TestNGSuiteRunner@4d1c005e]" started-at="2024-03-23T13:20:19 IST" name="setUpClass" finished-at="2024-03-23T13:20:31 IST" duration-ms="11917" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3d7314b3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepdefinitions.TestNGSuiteRunner@4d1c005e]" started-at="2024-03-23T13:20:31 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-23T13:22:22 IST" duration-ms="111221" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Adding a "Monitor" item to the cart and verifying sub total"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verifying Products subtotal]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepdefinitions.TestNGSuiteRunner@4d1c005e]" started-at="2024-03-23T13:22:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-23T13:23:45 IST" duration-ms="83226" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Adding a "Laptop" item to the cart and verifying sub total"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verifying Products subtotal]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepdefinitions.TestNGSuiteRunner@4d1c005e]" started-at="2024-03-23T13:23:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-23T13:25:53 IST" duration-ms="127685" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Adding a multiple items to the cart and verifying sub total"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verifying Products subtotal]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:stepdefinitions.TestNGSuiteRunner@4d1c005e]" started-at="2024-03-23T13:25:54 IST" name="tearDownClass" finished-at="2024-03-23T13:26:08 IST" duration-ms="14817" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- stepdefinitions.TestNGSuiteRunner -->
+    </test> <!-- Test -->
+  </suite> <!-- LW_Automation_Assignment_Suite -->
+</testng-resul
